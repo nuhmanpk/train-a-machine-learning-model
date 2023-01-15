@@ -32,6 +32,7 @@ dls.show_batch(max_n=20)
 + item_tfms=[Resize(192,method='squish')]: This line specifies that the item_tfms list, which is used to apply transform to each data item, should include the Resize transform. The Resize transform will be used to resize the image to a size of 192 pixels by squishing the aspect ratio.
 + dataloaders(path,bs=32): This line creates the DataLoader object by calling the dataloaders method on the DataBlock instance, passing in the path of the data and the batch size (32) as arguments. This DataLoader object can be used to iterate over the data in batches during training and evaluation.
 + dls.show_batch(max_n=20) : This line is calling the show_batch method on the DataLoader object, which will display a random sample of images from the training set and corresponding labels. The max_n argument is set to 20, which specifies the maximum number of images to be displayed.
++ sample model that predict car vs bike based on the photo that It is trained (Turn off dark mode to see the image label) <img src="https://raw.githubusercontent.com/nuhmanpk/train-a-model/main/car-vs-bike.png" alt="car-vs-bike-model"/>
 
 ### 3. fine-tune a pre-trained deep learning model on the dataset defined by the DataLoader object dls
 ```python
@@ -51,3 +52,5 @@ print(pred_class)
 
 + pred_class,pred_idx,outputs =learn.predict('image.jpeg'): This line calls the predict method on the Learner object, which will use the fine-tuned model to make a prediction on the image 'image.jpeg'. It will return the predicted class, the index of the predicted class, and the output tensor of the model.
 + print(pred_class): This line is printing the predicted class.
+
+###### This README.md file is fully generated with [Chat GPT](https://chat.openai.com/chat) (Except the image)
