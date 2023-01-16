@@ -1,4 +1,4 @@
-# train a machine learning model in 4 steps
+# Train a machine learning model in 4 steps
 This code is using the fastai library to create a data pipeline, fine-tune a pre-trained deep learning model, and make predictions on images. The data pipeline is defined using the DataBlock class, which is used to process and split the images into training and validation sets. The pre-trained model is fine-tuned on the dataset using the fine_tune method of the Learner class. Then, the fine-tuned model is used to make predictions on a single image using the predict method of the Learner class. The code also uses the duckduckgo_search library to search and download images from the internet, The Images are then resized to 192 pixels by squishing the aspect ratio. The final output will be the prediction of the class of the image. The prediction is made on the image 'bike3.jpeg' which should be present in the same directory where the code is running.
 
 ### 1. Download images from duckduckgo
