@@ -2,6 +2,11 @@ from duckduckgo_search import ddg_images
 search_terms = "bike","car"
 for index,search in enumerate(search_terms):
   ddg_images(search,max_results=200,download=(True,f"{search}"))
+
+# Damaged image breaks the training 
+# failed = verify_images(get_image_files(path))
+# failed.map(Path.unlink)
+# len(failed)
   
 from fastai.vision.all import *
 path= Path('bike_or_not')
