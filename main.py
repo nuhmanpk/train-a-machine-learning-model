@@ -8,7 +8,18 @@ for index,search in enumerate(search_terms):
 # failed = verify_images(get_image_files(path))
 # failed.map(Path.unlink)
 # len(failed)
-  
+
+"""
+#for ssl error
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+"""
+
 from fastai.vision.all import *
 path= Path('bike_or_not') # specify the parent image folder path here
 dls=DataBlock(
