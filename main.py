@@ -1,8 +1,10 @@
 from duckduckgo_search import ddg_images
 search_terms = "bike","car"
+# for optimised downloading check misc.py
 for index,search in enumerate(search_terms):
   ddg_images(search,max_results=200,download=(True,f"{search}"))
 
+  
 # make sure that there is no broken images
 
 # failed = verify_images(get_image_files(path))
