@@ -5,8 +5,6 @@ def search_images(keywords, max_results):
     print(f"Searchin for '{keywords}'.")
     return L(ddg_images(keywords, max_results = max_results)).itemgot('image')
   
-
-from fastdownload import download_url
 from fastai.vision.all import *
 from time import sleep
 
